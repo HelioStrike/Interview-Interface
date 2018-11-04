@@ -11,7 +11,7 @@
 	<div class="ui huge inverted menu" id="indexnav">
       <div class="ui container">
       
-        <a class="header item" href="/interview/home">
+        <a class="header item" href="/interview/dashboard.php">
           <p class="menu-btn" style="font-size:30px; margin: 10px;"><i class="angle double right icon"></i>Interview</p>
         </a>
 

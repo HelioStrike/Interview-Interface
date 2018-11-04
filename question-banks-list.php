@@ -1,20 +1,10 @@
+<!-- establish connection to sql -->
+<?php include 'connect.php'; ?>
 <?php 
 
-$servername = "localhost";
-$username = "root";
-$password = "sunny123";
-$dbname = "arp";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-//look for user
+//select all question banks
 $command = "SELECT * FROM question_banks_master";
 $result = $conn->query($command);
-
-//if an interview exists
-if($result->num_rows > 0)
-{
 
 ?>
 
@@ -31,8 +21,8 @@ if($result->num_rows > 0)
         <tbody>
 
 <?php
-    //store session variables and redirect
-    while($row = $result->fetch_assoc()) {
+//while there are more question banks, display them on the table
+while($row = $result->fetch_assoc()) {
 ?>
 
 <tr>
@@ -44,7 +34,6 @@ if($result->num_rows > 0)
 </tr>
 
 <?php
-    }
 }
 ?>
 

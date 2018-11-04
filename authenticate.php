@@ -1,11 +1,6 @@
+<!-- establish connection to sql -->
+<?php include 'connect.php'; ?>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "sunny123";
-$dbname = "arp";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
 //look for user
 $command = "SELECT * FROM users WHERE username = '" . $_POST["username"] . "' and password = '" . $_POST["password"] . "'";
@@ -22,6 +17,7 @@ if($result->num_rows > 0)
 }
 else
 {
+    //else redirect to login page
     header("Location: /interview/login.php");
 }
 ?>
