@@ -8,7 +8,7 @@
   </head>
   <body>
 
-	<div class="ui massive inverted menu" id="indexnav">
+	<div class="ui huge inverted menu" id="indexnav">
       <div class="ui container">
       
         <a class="header item" href="/interview/home">

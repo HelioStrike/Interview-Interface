@@ -9,10 +9,10 @@
 </head>
   <body>
 
-	<div class="ui massive inverted menu" id="indexnav">
+	  <div class="ui huge inverted menu" id="indexnav">
       <div class="ui container">
       
-        <a class="header item" href="/interview/home">
+        <a class="header item" href="/interview/dashboard.php">
           <p class="menu-btn" style="font-size:30px; margin: 10px;"><i class="angle double right icon"></i>Interview</p>
         </a>
 
@@ -23,6 +23,20 @@
       </div>
     </div>
 	
+    <div class="ui text container">
+      <div class="ui three column stackable grid">
+        <div class="column">
+          <a href="interviews.php"><div class="ui button">Interviews</div></a>
+        </div>
+        <div class="column">
+          <a href="interviews.php"><div class="ui button">Question Banks</div></a>
+        </div>
+        <div class="column">
+          <a href="interviews.php"><div class="ui button">Questions</div></a>
+        </div>
+      </div>
+    </div>
+
 
   </body>
 </html>
