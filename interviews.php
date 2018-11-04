@@ -3,13 +3,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="ISO-8859-1">
-    <title>Dashboard</title>
+    <title>Interviews</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
     <link rel="stylesheet" href="src/css/main.css">
 </head>
   <body>
 
-	  <div class="ui huge inverted menu" id="indexnav">
+	<div class="ui huge inverted menu" id="indexnav">
       <div class="ui container">
       
         <a class="header item" href="/interview/dashboard.php">
@@ -23,20 +23,9 @@
       </div>
     </div>
 	
-    <div class="ui text container">
-      <div class="ui three column stackable grid">
-        <div class="column">
-          <a href="interviews.php"><div class="ui button">Interviews</div></a>
-        </div>
-        <div class="column">
-          <a href="question-banks.php"><div class="ui button">Question Banks</div></a>
-        </div>
-        <div class="column">
-          <a href="questions.php"><div class="ui button">Questions</div></a>
-        </div>
-      </div>
+    <div class="ui container">
+        <?php include 'interviews-list.php'; ?>
     </div>
-
 
   </body>
 </html>
