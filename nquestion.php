@@ -34,7 +34,7 @@
         <div class="ui text container">
           <div class="ui segment">
             <div class="ui center aligned huge header">New Question</div>
-            <form class="ui form" action="ninterview-create.php" method="post">
+            <form class="ui form" action="nquestion-create.php" method="post">
             
               <div class="field">
                 <label>Question</label>
@@ -49,7 +49,7 @@
                 <div class="field">
                     <label>Type</label>
                     <div class="ui selection dropdown">
-                        <input type="hidden" name="gender">
+                        <input type="hidden" name="type">
                         <i class="dropdown icon"></i>
                         <div class="default text">Type</div>
                         <div class="menu">
