@@ -24,7 +24,8 @@
     </div>
 	
     <div class="ui container">
-        <?php include 'interviews-list.php'; ?>
+      <a href="/interview/ninterview.php"><div class="ui button">New Interview</div></a>
+      <?php include 'interviews-list.php'; ?>
     </div>
 
   </body>

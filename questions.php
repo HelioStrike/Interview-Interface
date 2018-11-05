@@ -22,9 +22,10 @@
         </div>
       </div>
     </div>
-	
+
     <div class="ui container">
-        <?php include 'questions-list.php'; ?>
+      <a href="/interview/nquestion.php"><div class="ui button">New Question</div></a>
+      <?php include 'questions-list.php'; ?>
     </div>
 
   </body>

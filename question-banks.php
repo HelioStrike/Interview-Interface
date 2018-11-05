@@ -9,7 +9,7 @@
 </head>
   <body>
 
-	<div class="ui huge inverted menu" id="indexnav">
+  	<div class="ui huge inverted menu" id="indexnav">
       <div class="ui container">
       
         <a class="header item" href="/interview/dashboard.php">
@@ -23,8 +23,10 @@
       </div>
     </div>
 	
+
     <div class="ui container">
-        <?php include 'question-banks-list.php'; ?>
+      <a href="/interview/nquestionbank.php"><div class="ui button">New Question Bank</div></a>
+      <?php include 'question-banks-list.php'; ?>
     </div>
 
   </body>
