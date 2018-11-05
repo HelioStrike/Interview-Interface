@@ -13,6 +13,7 @@ $result = $conn->query($command);
             <tr>
                 <th>Interview Id</th>
                 <th>Description</th>
+                <th>Question Bank Id</th>
                 <th>Start Time</th>
                 <th>End Time</th>
                 <th>Status</th>
@@ -26,8 +27,9 @@ while($row = $result->fetch_assoc()) {
 ?>
 
 <tr>
-    <td data-label="Interview Id"><?php echo $row["interview_id"]; ?></td>
+    <td data-label="Interview Id"><?php echo $row["id"]; ?></td>
     <td data-label="Description"><?php echo $row["description"]; ?></td>
+    <td data-label="Question Bank Id"><?php echo $row["bank_id"]; ?></td>
     <td data-label="Start Time"><?php echo $row["start_time"]; ?></td>
     <td data-label="End Time"><?php echo $row["end_time"]; ?></td>
     <td data-label="Status"><?php echo $row["status"]; ?></td>

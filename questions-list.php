@@ -31,7 +31,7 @@ while($row = $result->fetch_assoc()) {
     <td data-label="Question"><?php echo $row["question"]; ?></td>
     <td data-label="Answer"><?php echo $row["answer"]; ?></td>
     <td data-label="Type"><?php echo $row["type"]; ?></td>
-    <td data-label="Created On"><?php echo $row["created_on"]; ?></td>
+    <td data-label="Created On"><?php echo $row["date"]; ?></td>
     <td data-label="Created By"><?php echo $row["created_by"]; ?></td>
 </tr>
 

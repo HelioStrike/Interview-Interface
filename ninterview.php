@@ -37,27 +37,21 @@
             <form class="ui form" action="ninterview-create.php" method="post">
             
               <div class="field">
-                <label>Question</label>
-                <input type="text" name="question" placeholder="Question">
+                <label>Description</label>
+                <input type="text" name="description" placeholder="Description">
               </div>
             
               <div class="field">
-                <label>Answer</label>
-                <input type="text" name="answer" placeholder="Answer">
+                <label>Start Time</label>
+                <input type="text" name="starttime" placeholder="Start Time">
               </div>
 
-                <div class="field">
-                    <label>Type</label>
-                    <div class="ui selection dropdown">
-                        <input type="hidden" name="gender">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">Type</div>
-                        <div class="menu">
-                            <div class="item" data-value="1">Theory</div>
-                            <div class="item" data-value="0">MCQ</div>
-                        </div>
-                    </div>
-                </div>
+              <div class="field">
+                <label>End Time</label>
+                <input type="text" name="endtime" placeholder="End Time">
+              </div>
+
+              <?php include 'questionbank-dropdown.php'; ?>
 
               <div class="ui center aligned container">
                 <button class="ui button" type="submit">Submit</button>

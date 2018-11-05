@@ -8,7 +8,7 @@ $dbname = "arp";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 //select question_id
-$command = "SELECT question_id FROM temporary_question_bank WHERE interview_id = '" . $_GET["interview_id"] . "'";
+$command = "SELECT question_id FROM temporary_question_bank WHERE id = '" . $_GET["interview_id"] . "'";
 $result = $conn->query($command);
 
 //if such entries exist
