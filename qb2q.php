@@ -1,11 +1,7 @@
+<!-- Return question_ids given bank_id -->
+<!-- Establish connection to mysql -->
+<?php include 'connect.php'; ?>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "sunny123";
-$dbname = "arp";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
 //select question_id
 $command = "SELECT question_id FROM question_to_bank WHERE bank_id = '" . $_GET["bank_id"] . "'";

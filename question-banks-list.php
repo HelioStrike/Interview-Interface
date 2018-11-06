@@ -1,3 +1,4 @@
+<!-- display list of question banks -->
 <!-- establish connection to sql -->
 <?php include 'connect.php'; ?>
 <?php 

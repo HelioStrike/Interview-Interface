@@ -1,3 +1,5 @@
+
+<!-- establish connection to mysql -->
 <?php include 'connect.php'; ?>
 <?php
 
@@ -11,7 +13,7 @@ $icount = $row["interviews"];
 $command = "UPDATE next_ids SET interviews=".($icount + 1)." WHERE interviews=".$icount;
 $conn->query($command);
 
-//look for user
+//insert new entry into interviews_master table
 $command = "INSERT INTO interviews_master(student_id, interview_id, description, bank_id, start_time, end_time, status, created_by) VALUES('" 
     . $_POST["studentid"] . "'," . $icount . ",'" . $_POST["description"] . "'," . $_POST["qbankid"] . "," . $_POST["starttime"] . "," . 
     $_POST["endtime"] . ",'" . "active" . "','" . $_SESSION["username"] . "')";

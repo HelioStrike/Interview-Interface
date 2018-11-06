@@ -1,3 +1,4 @@
+<!-- display list of checkboxes for questions -->
 <!-- establish connection to sql -->
 <?php include 'connect.php'; ?>
 <?php 

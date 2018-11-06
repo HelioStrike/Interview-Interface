@@ -1,3 +1,4 @@
+<!-- creates a dropdown of question banks -->
 <!-- establish connection to sql -->
 <?php include 'connect.php'; ?>
 <?php 

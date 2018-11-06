@@ -1,11 +1,7 @@
+<!-- returns question_ids given the interview_id -->
+<!-- establish connection to mysql -->
+<?php include 'connect.php'; ?>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "sunny123";
-$dbname = "arp";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
 //select question_id
 $command = "SELECT question_id FROM temporary_question_bank WHERE id = '" . $_GET["interview_id"] . "'";

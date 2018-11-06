@@ -11,13 +11,13 @@ $qbcount = $row["question_banks"];
 $command = "UPDATE next_ids SET question_banks=".($qbcount + 1)." WHERE question_banks=".$qbcount;
 $conn->query($command);
 
-//look for user
+//insert new entry into question_banks_master table
 $command = "INSERT INTO question_banks_master(name, id, description, created_by) VALUES('" . $_POST["name"] . "'," . $qbcount . ",'" .
      $_POST["description"] . "','" . $_SESSION["username"] . "')";
 
 $conn->query($command);
 
-
+//add mapping from question_id to bank+id into question_to_bank table
 if(isset($_POST["questions"]) && is_array($_POST["questions"]))
 {
     foreach($_POST["questions"] as $question_id)

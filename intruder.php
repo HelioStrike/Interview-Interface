@@ -1,3 +1,4 @@
+<!-- kicks intruders back to login page -->
 <?php
 
 session_start();

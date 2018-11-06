@@ -1,3 +1,4 @@
+<!-- Logs out users by destroying session -->
 <?php
 
 session_start();
