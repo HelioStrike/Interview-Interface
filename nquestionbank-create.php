@@ -1,6 +1,7 @@
+<!-- create new question bank -->
+<!-- establish connection with mysql -->
 <?php include 'connect.php'; ?>
 <?php
-
 
 //finding number of question banks
 $command = "SELECT * FROM next_ids";

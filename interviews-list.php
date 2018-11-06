@@ -19,6 +19,7 @@ $result = $conn->query($command);
                 <th>Start Time</th>
                 <th>End Time</th>
                 <th>Status</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -36,6 +37,7 @@ while($row = $result->fetch_assoc()) {
     <td data-label="Start Time"><?php echo $row["start_time"]; ?></td>
     <td data-label="End Time"><?php echo $row["end_time"]; ?></td>
     <td data-label="Status"><?php echo $row["status"]; ?></td>
+    <td data-label="Delete"><a href="/interview/delete-interview.php?id=<?php echo $row["interview_id"]; ?>"><i class="x icon"></i></a></td>
 </tr>
 
 <?php

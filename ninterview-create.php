@@ -1,8 +1,7 @@
-
-<!-- establish connection to mysql -->
+<!-- create new interview -->
+<!-- establish connection with mysql -->
 <?php include 'connect.php'; ?>
 <?php
-
 
 //finding number of interviews
 $command = "SELECT * FROM next_ids";

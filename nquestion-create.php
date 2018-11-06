@@ -1,6 +1,7 @@
+<!-- create new question -->
+<!-- establish connection with mysql -->
 <?php include 'connect.php'; ?>
 <?php
-
 
 //finding number of questions
 $command = "SELECT * FROM next_ids";
