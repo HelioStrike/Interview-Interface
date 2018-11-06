@@ -37,6 +37,11 @@
             <form class="ui form" action="ninterview-create.php" method="post">
             
               <div class="field">
+                <label>Student Id</label>
+                <input type="text" name="studentid" placeholder="Student Id">
+              </div>
+
+              <div class="field">
                 <label>Description</label>
                 <input type="text" name="description" placeholder="Description">
               </div>

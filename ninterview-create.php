@@ -14,8 +14,8 @@ while($row = $result->fetch_assoc()) {
 $icount += 1;
 
 //look for user
-$command = "INSERT INTO interviews_master(id, description, bank_id, start_time, end_time, status, created_by) VALUES(" . $icount . ",'" . 
-    $_POST["description"] . "'," . $_POST["qbankid"] . "," . $_POST["starttime"] . "," . 
+$command = "INSERT INTO interviews_master(student_id, interview_id, description, bank_id, start_time, end_time, status, created_by) VALUES('" 
+    . $_POST["studentid"] . "'," . $icount . ",'" . $_POST["description"] . "'," . $_POST["qbankid"] . "," . $_POST["starttime"] . "," . 
     $_POST["endtime"] . ",'" . "active" . "','" . $_SESSION["username"] . "')";
 
 $conn->query($command);
