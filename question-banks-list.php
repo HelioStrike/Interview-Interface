@@ -28,7 +28,7 @@ while($row = $result->fetch_assoc()) {
 ?>
 
 <tr>
-    <td data-label="Name"><?php echo $row["name"]; ?></td>
+    <td data-label="Name"><a href="/interview/question-bank.php?id=<?php echo $row["id"] ?>"><?php echo $row["name"]; ?></a></td>
     <td data-label="Bank Id"><?php echo $row["id"]; ?></td>
     <td data-label="Description"><?php echo $row["description"]; ?></td>
     <td data-label="Created On"><?php echo $row["date"]; ?></td>
