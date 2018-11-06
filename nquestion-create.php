@@ -3,15 +3,13 @@
 
 
 //finding number of questions
-$command = "SELECT * FROM questions_master";
+$command = "SELECT * FROM next_ids";
 $result = $conn->query($command);
+$row = $result->fetch_assoc();
+$qcount = $row["questions"];
 
-$qcount = 0;
-
-while($row = $result->fetch_assoc()) {
-    $qcount += 1;
-}
-$qcount += 1;
+$command = "UPDATE next_ids SET questions=".($qcount + 1)." WHERE questions=".$qcount;
+$conn->query($command);
 
 //look for user
 $command = "INSERT INTO questions_master(id, question, answer, type, created_by) VALUES(" . $qcount . ",'" . $_POST["question"] . "','" . $_POST["answer"];

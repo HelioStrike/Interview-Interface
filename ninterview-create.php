@@ -2,16 +2,14 @@
 <?php
 
 
-//finding number of questions
-$command = "SELECT * FROM interviews_master";
+//finding number of interviews
+$command = "SELECT * FROM next_ids";
 $result = $conn->query($command);
+$row = $result->fetch_assoc();
+$icount = $row["interviews"];
 
-$icount = 0;
-
-while($row = $result->fetch_assoc()) {
-    $icount += 1;
-}
-$icount += 1;
+$command = "UPDATE next_ids SET interviews=".($icount + 1)." WHERE interviews=".$icount;
+$conn->query($command);
 
 //look for user
 $command = "INSERT INTO interviews_master(student_id, interview_id, description, bank_id, start_time, end_time, status, created_by) VALUES('" 

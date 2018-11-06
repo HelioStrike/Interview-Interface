@@ -2,16 +2,14 @@
 <?php
 
 
-//finding number of questions
-$command = "SELECT * FROM question_banks_master";
+//finding number of question banks
+$command = "SELECT * FROM next_ids";
 $result = $conn->query($command);
+$row = $result->fetch_assoc();
+$qbcount = $row["question_banks"];
 
-$qbcount = 0;
-
-while($row = $result->fetch_assoc()) {
-    $qbcount += 1;
-}
-$qbcount += 1;
+$command = "UPDATE next_ids SET question_banks=".($qbcount + 1)." WHERE question_banks=".$qbcount;
+$conn->query($command);
 
 //look for user
 $command = "INSERT INTO question_banks_master(name, id, description, created_by) VALUES('" . $_POST["name"] . "'," . $qbcount . ",'" .

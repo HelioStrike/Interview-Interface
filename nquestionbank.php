@@ -29,7 +29,7 @@
     </div>
 	
 
-    <div class="ui middle aligned grid wrapper">
+    <div class="ui middle aligned grid">
       <div class="column">
         <div class="ui text container">
           <div class="ui segment">
