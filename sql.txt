@@ -1,0 +1,1 @@
+>> CREATE TABLE interviews_master(interview_id INT, description VARCHAR(1000), start_time INT, end_time INT, status varchar(20), created_by VARCHAR(100), created_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
