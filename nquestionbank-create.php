@@ -2,7 +2,7 @@
 <!-- establish connection with mysql -->
 <?php include 'connect.php'; ?>
 <?php
-
+ini_set('display_errors', 1); 
 //finding number of question banks
 $command = "SELECT * FROM next_ids";
 $result = $conn->query($command);
