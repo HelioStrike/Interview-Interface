@@ -3,7 +3,7 @@
 <?php include 'connect.php'; ?>
 <?php 
 
-//look for user
+//look for interviews
 $command = "SELECT * FROM interviews_master WHERE student_id='".$_GET["student_id"]."'";
 $result = $conn->query($command);
 
@@ -16,10 +16,9 @@ $result = $conn->query($command);
                 <th>Student Id</th>
                 <th>Description</th>
                 <th>Question Bank Id</th>
-                <th>Start Time</th>
-                <th>End Time</th>
+                <th>Created On</th>
                 <th>Status</th>
-                <th>Delete</th>
+                <th>View</th>
             </tr>
         </thead>
         <tbody>
@@ -34,10 +33,10 @@ while($row = $result->fetch_assoc()) {
     <td data-label="Student Id"><?php echo $row["student_id"]; ?></td>
     <td data-label="Description"><?php echo $row["description"]; ?></td>
     <td data-label="Question Bank Id"><?php echo $row["bank_id"]; ?></td>
-    <td data-label="Start Time"><?php echo ((int)($row["start_time"]/100)).':'.($row["start_time"]%100); ?></td>
-    <td data-label="End Time"><?php echo ((int)($row["end_time"]/100)).':'.($row["end_time"]%100); ?></td>
+    <td data-label="Start Time"><?php echo $row["created_on"]; ?></td>
     <td data-label="Status"><?php echo $row["status"]; ?></td>
-    <td data-label="Delete"><a href="/interview/delete-interview.php?id=<?php echo $row["interview_id"]; ?>"><i class="x icon"></i></a></td>
+    <td data-label="View"><a href="/interview/show-interview.php?interview_id='<?php echo($row["interview_id"]); ?>'">
+            <button>View</button></a></td>
 </tr>
 
 <?php

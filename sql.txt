@@ -1,9 +1,13 @@
 >> CREATE TABLE users(username VARCHAR(100), password VARCHAR(32), created_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
 
->> CREATE TABLE interviews_master(student_id VARCHAR(1000), interview_id INT, description VARCHAR(1000), question_bank_id INT, bank_id INT, start_time INT, end_time INT, status varchar(20), created_by VARCHAR(100), created_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
+>> CREATE TABLE interviews_master(student_id VARCHAR(50), interview_id INT, description VARCHAR(1000), question_bank_id INT, bank_id INT, start_time INT, end_time INT, status varchar(20), created_by VARCHAR(100), created_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
 
 >> CREATE TABLE questions_master(id INT, question VARCHAR(1000), answer VARCHAR(10000), type VARCHAR(20), created_by VARCHAR(100), created_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
 
 >> CREATE TABLE question_banks_master(name VARCHAR(200), id INT, description VARCHAR(1000), created_by VARCHAR(100), created_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
 
 >> CREATE TABLE question_to_bank(question_id INT, bank_id INT);
+
+>> CREATE TABLE next_ids(interviews INT, question_banks INT, questions INT);
+
+>> CREATE TABLE interview_history(interview_id INT, question_id INT, student_id VARCHAR(50), question VARCHAR(1000), correct_answer VARCHAR(10000), response_answer VARCHAR(10000), grade VARCHAR(10), created_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
