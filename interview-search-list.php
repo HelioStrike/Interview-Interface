@@ -3,13 +3,14 @@
 <?php include 'statuses.php'; ?>
 
 <div class="ui text container">
-    <form class="ui form" action="set-statuses.php" method="post">
+    <form class="ui form" action="set-statuses-search.php" method="post">
         <?php for($i = 0; $i < $statuslen; $i++) { ?>
             <div class="ui <?php if($_GET["status"][$i] == '1') { echo('checked');} ?> checkbox">
                 <input type="checkbox"  name="checks[]" value="<?php echo $i; ?>" <?php if($_GET["status"][$i] == '1') { echo "checked=''";} ?>>
                 <label><?php echo $statuses[$i]; ?></label>
             </div>
         <?php } ?>
+        <input type="hidden" name="student_id" value="<?php echo $_GET["student_id"]; ?>" />
         <button class="ui button" type="submit">Submit</button>
     </form>
 </div>
