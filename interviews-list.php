@@ -1,35 +1,28 @@
 <!-- displays the list of interviews -->
-<!-- establish connection to sql -->
+
+<?php include 'statuses.php'; ?>
 
 <div class="ui text container">
-    <div class="ui checkbox">
-        <input type="checkbox" name="example">
-        <label>Active</label>
-    </div>
-    <div class="ui checkbox">
-        <input type="checkbox" name="example">
-        <label>OnGoing</label>
-    </div>
-    <div class="ui checkbox">
-        <input type="checkbox" name="example">
-        <label>Ended</label>
-    </div>
-    <div class="ui checkbox">
-        <input type="checkbox" name="example">
-        <label>Cancelled</label>
-    </div>
+    <form class="ui form" action="set-statuses.php" method="post">
+        <?php for($i = 0; $i < $statuslen; $i++) { ?>
+            <div class="ui <?php if($_GET["status"][$i] == '1') { echo('checked');} ?> checkbox">
+                <input type="checkbox"  name="checks[]" value="<?php echo $i; ?>" <?php if($_GET["status"][$i] == '1') { echo "checked=''";} ?>>
+                <label><?php echo $statuses[$i]; ?></label>
+            </div>
+        <?php } ?>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
 </div>
 
+<!-- establish connection to sql -->
 <?php include 'connect.php'; ?>
 <?php 
-
-$statuses = array("active", "ongoing", "ended", "cancelled");
 
 //look for user
 $command = "SELECT * FROM interviews_master WHERE";
 
 $status = $_GET["status"];
-for($i = 0; $i < 4; $i++)
+for($i = 0; $i < $statuslen; $i++)
 {
     if($status[$i] == '1')
     {

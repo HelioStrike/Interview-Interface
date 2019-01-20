@@ -1,10 +1,38 @@
 <!-- displays the list of interviews -->
+
+<?php include 'statuses.php'; ?>
+
+<div class="ui text container">
+    <form class="ui form" action="set-statuses.php" method="post">
+        <?php for($i = 0; $i < $statuslen; $i++) { ?>
+            <div class="ui <?php if($_GET["status"][$i] == '1') { echo('checked');} ?> checkbox">
+                <input type="checkbox"  name="checks[]" value="<?php echo $i; ?>" <?php if($_GET["status"][$i] == '1') { echo "checked=''";} ?>>
+                <label><?php echo $statuses[$i]; ?></label>
+            </div>
+        <?php } ?>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
+</div>
+
 <!-- establish connection to sql -->
 <?php include 'connect.php'; ?>
 <?php 
 
 //look for interviews
-$command = "SELECT * FROM interviews_master WHERE student_id='".$_GET["student_id"]."'";
+$command = "SELECT * FROM interviews_master WHERE student_id='".$_GET["student_id"]."' AND (";
+
+$status = $_GET["status"];
+for($i = 0; $i < $statuslen; $i++)
+{
+    if($status[$i] == '1')
+    {
+        $command = $command." status='".$statuses[$i]."' OR";
+    }
+}
+
+$command = substr($command,0,strlen($command)-3);
+$command = $command.")";
+echo $command;
 $result = $conn->query($command);
 
 ?>

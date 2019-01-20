@@ -6,7 +6,12 @@
     <title>Interviews</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
     <link rel="stylesheet" href="src/css/main.css">
-</head>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  </head>
   <body>
 
 	<div class="ui huge inverted menu" id="indexnav">
@@ -28,5 +33,8 @@
       <?php include 'interviews-list.php'; ?>
     </div>
 
+    <script>
+        $('.ui.checkbox').checkbox();
+    </script>
   </body>
 </html>
