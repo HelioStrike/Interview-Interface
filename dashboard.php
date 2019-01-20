@@ -26,7 +26,7 @@
     <div class="ui text container">
       <div class="ui four column stackable grid">
         <div class="column">
-          <a href="interviews.php"><div class="ui button">Interviews</div></a>
+          <a href="interviews.php?status=1100"><div class="ui button">Interviews</div></a>
         </div>
         <div class="column">
           <a href="question-banks.php"><div class="ui button">Question Banks</div></a>

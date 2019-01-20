@@ -1,7 +1,7 @@
 <?php include 'connect.php'; ?>
 <?php
 
-$command = "SELECT * FROM interview_history WHERE interview_id=".$_GET["interview_id"];
+$command = "SELECT * FROM interview_history WHERE student_id=".$_GET["student_id"];
 $result = $conn->query($command);
 
 if($result->num_rows > 0)

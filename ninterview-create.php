@@ -30,9 +30,6 @@ $command = "INSERT INTO interviews_master(student_id, interview_id, description,
     . $_POST["studentid"] . "'," . $icount . ",'" . $_POST["description"] . "'," . $_POST["qbankid"] . "," . ($shours*100+$smins) . "," . 
     ($ehours*100+$emins) . ",'" . "active" . "','" . $_SESSION["username"] . "')";
 
-//insert new entry into interviews_master table
-$command = "INSERT INTO student_interview_mapping(student_id, interview_id) VALUES('" . $_POST["studentid"] . "'," . $icount;
-
 $conn->query($command);
 
 header("Location: /interview/interviews.php");
