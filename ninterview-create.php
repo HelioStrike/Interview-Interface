@@ -19,8 +19,11 @@ $conn->query($command);
 $command = "INSERT INTO interviews_master(student_id, interview_id, description, question_bank_id, start_time, end_time, status, created_by) VALUES('" 
     . $_POST["studentid"] . "'," . $icount . ",'" . $_POST["description"] . "'," . $_POST["qbankid"] . ",'" . $starttime . "','" . 
     $endtime . "','" . "active" . "','" . $_SESSION["username"] . "')";
-
 $conn->query($command);
+
+$command = "INSERT INTO student_interview_mapping(student_id, interview_id) VALUES(".$_POST["studentid"].",".$icount.")";
+$conn->query($command);
+
 
 header("Location: /interview/interviews.php?status=1111");
 

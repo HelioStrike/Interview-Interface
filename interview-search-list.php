@@ -33,7 +33,6 @@ for($i = 0; $i < $statuslen; $i++)
 
 $command = substr($command,0,strlen($command)-3);
 $command = $command.")";
-echo $command;
 $result = $conn->query($command);
 
 ?>
