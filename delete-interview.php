@@ -7,6 +7,9 @@
 $command = "UPDATE interviews_master SET status='cancelled' WHERE interview_id=".$_GET["id"];
 $result = $conn->query($command);
 
+$command = "DELETE FROM student_interview_mapping WHERE interview_id=".$_GET["id"];
+$result = $conn->query($command);
+
 header("Location: /interview/interviews.php");
 
 ?>

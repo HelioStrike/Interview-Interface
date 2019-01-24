@@ -60,9 +60,9 @@ while($row = $result->fetch_assoc()) {
     <td data-label="Interview Id"><?php echo $row["interview_id"]; ?></td>
     <td data-label="Student Id"><?php echo $row["student_id"]; ?></td>
     <td data-label="Description"><?php echo $row["description"]; ?></td>
-    <td data-label="Question Bank Id"><?php echo $row["bank_id"]; ?></td>
-    <td data-label="Start Time"><?php echo ((int)($row["start_time"]/100)).':'.($row["start_time"]%100); ?></td>
-    <td data-label="End Time"><?php echo ((int)($row["end_time"]/100)).':'.($row["end_time"]%100); ?></td>
+    <td data-label="Question Bank Id"><?php echo $row["question_bank_id"]; ?></td>
+    <td data-label="Start Time"><?php echo $row["start_time"]; ?></td>
+    <td data-label="End Time"><?php echo $row["end_time"]; ?></td>
     <td data-label="Status"><?php echo $row["status"]; ?></td>
     <td data-label="View"><a href="/interview/show-interview.php?interview_id='<?php echo($row["interview_id"]); ?>'">
             <button>View</button></a></td>
@@ -79,3 +79,4 @@ while($row = $result->fetch_assoc()) {
 
     </tbody>
 </table>
+
