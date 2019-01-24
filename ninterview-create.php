@@ -24,6 +24,9 @@ $conn->query($command);
 $command = "INSERT INTO student_interview_mapping(student_id, interview_id) VALUES('".$_POST["studentid"]."',".$icount.")";
 $conn->query($command);
 
+$command = "INSERT INTO interview_questiontable(interview_no, question_bank) VALUES('".$icount."',".$_POST["qbankid"].")";
+$conn->query($command);
+
 
 header("Location: /interview/interviews.php?status=1111");
 

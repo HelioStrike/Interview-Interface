@@ -13,7 +13,7 @@ $command = "UPDATE next_ids SET questions=".($qcount + 1)." WHERE questions=".$q
 $conn->query($command);
 
 //look for user
-$command = "INSERT INTO questions_master(id, question, answer, type, created_by) VALUES(" . $qcount . ",'" . $_POST["question"] . "','" . $_POST["answer"];
+$command = "INSERT INTO questions_master(id, question, answer, type, created_by) VALUES(" . $qcount . ",'" . $_POST["question"] . "','" . $_POST["answer"] . "')";
 if($_POST["type"] == 1)
 {
     $command = $command . "','theory'";
