@@ -3,10 +3,10 @@
 <?php include 'connect.php'; ?>
 <?php 
 
-$command = "SELECT COUNT(*) FROM interviews_master";
+$command = "SELECT COUNT(*) FROM questions_master";
 $result = $conn->query($command);
-$interview_count = $result->fetch_assoc()["COUNT(*)"];
-$button_count = ceil($interview_count/$_GET["recordnum"]);
+$question_count = $result->fetch_assoc()["COUNT(*)"];
+$question_count = ceil($question_count/$_GET["recordnum"]);
 
 //select all questions
 $command = "SELECT * FROM questions_master LIMIT " . $_GET["begin"] . "," . $_GET["recordnum"];
