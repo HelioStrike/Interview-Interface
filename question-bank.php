@@ -7,7 +7,7 @@ $result = $conn->query($command);
 
 if($result->num_rows == 0)
 {
-    header("Location: /interview/question-banks.php");
+    header("Location: /interview/question-banks.php?begin=0&recordnum=10");
 }
 
 $row = $result->fetch_assoc();

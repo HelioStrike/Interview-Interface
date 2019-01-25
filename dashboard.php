@@ -26,13 +26,13 @@
     <div class="ui text container">
       <div class="ui four column stackable grid">
         <div class="column">
-          <a href="interviews.php?status=1100"><div class="ui button">Interviews</div></a>
+          <a href="interviews.php?status=1100&begin=0&recordnum=10"><div class="ui button">Interviews</div></a>
         </div>
         <div class="column">
-          <a href="question-banks.php"><div class="ui button">Question Banks</div></a>
+          <a href="question-banks.php?begin=0&recordnum=10"><div class="ui button">Question Banks</div></a>
         </div>
         <div class="column">
-          <a href="questions.php"><div class="ui button">Questions</div></a>
+          <a href="questions.php?begin=0&recordnum=10"><div class="ui button">Questions</div></a>
         </div>
         <div class="column">
           <a href="interview-search.php"><div class="ui button">Interview Search</div></a>

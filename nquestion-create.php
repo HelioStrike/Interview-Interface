@@ -27,6 +27,6 @@ $command = $command . ",'" . $_SESSION["username"] . "')";
 
 $result = $conn->query($command);
 
-header("Location: /interview/questions.php");
+header("Location: /interview/questions.php?begin=0&recordnum=10");
 
 ?>

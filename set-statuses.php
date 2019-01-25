@@ -13,6 +13,6 @@ if(isset($_POST["checks"]) && is_array($_POST["checks"]))
     }
 }
 
-header("Location: /interview/interviews.php?status=".$status);
+header("Location: /interview/interviews.php?status=".$status . "&begin=0&recordnum=10");
 
 ?>

@@ -10,6 +10,6 @@ $result = $conn->query($command);
 $command = "DELETE FROM question_to_bank WHERE bank_id=".$_GET["id"];
 $result = $conn->query($command);
 
-header("Location: /interview/question-banks.php");
+header("Location: /interview/question-banks.php?begin=0&recordnum=10");
 
 ?>

@@ -35,6 +35,6 @@ if(isset($_POST["questions"]) && is_array($_POST["questions"]))
     }
 }
 
-header("Location: /interview/question-banks.php");
+header("Location: /interview/question-banks.php?begin=0&recordnum=10");
 
 ?>

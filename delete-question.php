@@ -7,6 +7,6 @@
 $command = "DELETE FROM questions_master WHERE id=".$_GET["id"];
 $result = $conn->query($command);
 
-header("Location: /interview/questions.php");
+header("Location: /interview/questions.php?begin=0&recordnum=10");
 
 ?>

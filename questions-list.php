@@ -3,8 +3,13 @@
 <?php include 'connect.php'; ?>
 <?php 
 
+$command = "SELECT COUNT(*) FROM interviews_master";
+$result = $conn->query($command);
+$interview_count = $result->fetch_assoc()["COUNT(*)"];
+$button_count = ceil($interview_count/$_GET["recordnum"]);
+
 //select all questions
-$command = "SELECT * FROM questions_master";
+$command = "SELECT * FROM questions_master LIMIT " . $_GET["begin"] . "," . $_GET["recordnum"];
 $result = $conn->query($command);
 
 ?>
@@ -44,3 +49,11 @@ while($row = $result->fetch_assoc()) {
 
     </tbody>
 </table>
+
+<div class="ui icon buttons">
+    <?php for($i=0;$i<$button_count; $i++) { ?>
+        <a href="/interview/interviews.php?status=<?php echo $_GET["status"]; ?>&begin=<?php echo ($i*((int)$_GET["recordnum"])); ?>&recordnum=<?php echo $_GET["recordnum"]; ?>">
+        <button class="ui button"><?php echo ($i+1); ?></button></a>
+    <?php } ?>
+</div>
+
