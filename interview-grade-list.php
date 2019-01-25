@@ -1,4 +1,4 @@
-<!-- displays the list of interviews -->
+<!-- displays the list of interview responses -->
 <!-- establish connection to sql -->
 <?php include 'connect.php'; ?>
 <?php 

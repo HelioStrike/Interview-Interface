@@ -1,3 +1,4 @@
+<!-- displays the list of interviews -->
 <?php include 'intruder.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

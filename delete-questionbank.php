@@ -1,9 +1,9 @@
-<!-- create new question -->
+<!-- delete question bank -->
 <!-- establish connection with mysql -->
 <?php include 'connect.php'; ?>
 <?php
 
-//delete question with given id
+//delete question bank with given id
 $command = "DELETE FROM question_banks_master WHERE id=".$_GET["id"];
 $result = $conn->query($command);
 

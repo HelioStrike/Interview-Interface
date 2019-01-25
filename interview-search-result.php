@@ -1,3 +1,4 @@
+<!-- displays interview search result -->
 <?php include 'intruder.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

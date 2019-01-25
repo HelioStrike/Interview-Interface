@@ -1,4 +1,4 @@
-<!-- create new question -->
+<!-- delete/cancel interview -->
 <!-- establish connection with mysql -->
 <?php include 'connect.php'; ?>
 <?php

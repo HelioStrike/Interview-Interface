@@ -1,3 +1,4 @@
+<!-- displays list of question banks -->
 <?php include 'intruder.php'; ?>
 <?php include 'connect.php'; ?>
 <?php

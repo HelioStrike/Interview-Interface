@@ -1,4 +1,4 @@
-<!-- displays the list of interviews -->
+<!-- displays the search list of interviews -->
 
 <?php include 'statuses.php'; ?>
 

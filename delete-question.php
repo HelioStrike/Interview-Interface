@@ -1,4 +1,4 @@
-<!-- create new question -->
+<!-- delete question -->
 <!-- establish connection with mysql -->
 <?php include 'connect.php'; ?>
 <?php
