@@ -65,6 +65,11 @@
                 <input type="text" name="endminute" placeholder="Minute" style="width:15%;">
               </div>
 
+              <div class="field">
+                <label>Number of Questions</label>
+                <input type="text" name="numquestions" placeholder="Number of Questions">
+              </div>
+
               <?php include 'questionbank-dropdown.php'; ?>
 
               <div class="ui center aligned container">

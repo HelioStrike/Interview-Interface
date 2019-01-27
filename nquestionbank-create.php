@@ -12,8 +12,8 @@ $command = "UPDATE next_ids SET question_banks=".($qbcount + 1)." WHERE question
 $conn->query($command);
 
 //insert new entry into question_banks_master table
-$command = "INSERT INTO question_banks_master(name, id, description, created_by) VALUES('" . $_POST["name"] . "'," . $qbcount . ",'" .
-     $_POST["description"] . "','" . $_SESSION["username"] . "')";
+$command = "INSERT INTO question_banks_master(name, id, description, no_of_questions, created_by) VALUES('" . $_POST["name"] . "'," . $qbcount . ",'" .
+     $_POST["description"] . "'," . count($_POST["questions"]) . ",'" . $_SESSION["username"] . "')";
 
 $conn->query($command);
 
