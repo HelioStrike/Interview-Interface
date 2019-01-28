@@ -44,6 +44,7 @@ $result = $conn->query($command);
                 <th>Student Id</th>
                 <th>Description</th>
                 <th>Question Bank Id</th>
+                <th>Number of Questions</th>
                 <th>Created On</th>
                 <th>Status</th>
                 <th>View</th>
@@ -61,6 +62,7 @@ while($row = $result->fetch_assoc()) {
     <td data-label="Student Id"><?php echo $row["student_id"]; ?></td>
     <td data-label="Description"><?php echo $row["description"]; ?></td>
     <td data-label="Question Bank Id"><?php echo $row["question_bank_id"]; ?></td>
+    <td data-label="Number of Questions"><?php echo $row["no_of_questions"]; ?></td>
     <td data-label="Start Time"><?php echo $row["created_on"]; ?></td>
     <td data-label="Status"><?php echo $row["status"]; ?></td>
     <td data-label="View"><a href="/interview/show-interview.php?interview_id='<?php echo($row["interview_id"]); ?>'">

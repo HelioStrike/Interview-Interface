@@ -21,7 +21,7 @@ $command = "INSERT INTO interviews_master(student_id, interview_id, description,
     $endtime . "','" . "active" . "','" . $_SESSION["username"] . "'," . $_POST["numquestions"] . ")";
 $conn->query($command);
 
-$command = "INSERT INTO student_interview_mapping(student_id, interview_no, start_time, end_time, no_of_questions) VALUES('".$_POST["studentid"]."',".$icount.",'".$starttime."','".$endtime."',".$_POST["numquestions"].")";
+$command = "INSERT INTO student_interview_mapping(interview_no, start_time, end_time, student_id, no_of_questions) VALUES(".$icount.",'".$starttime."','".$endtime."','".$_POST["studentid"]."',".$_POST["numquestions"].")";
 $conn->query($command);
 
 $command = "INSERT INTO interview_questiontable(interview_no, question_bank) VALUES('".$icount."',".$_POST["qbankid"].")";

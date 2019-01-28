@@ -18,7 +18,7 @@ if($_POST["description"] != '')
     $row["description"] = $_POST["description"];
 }
 
-$command = "UPDATE question_banks_master SET name='".$row["name"]."', description='".$row["description"]."' WHERE id=".$_POST["id"];
+$command = "UPDATE question_banks_master SET name='".$row["name"]."', description='".$row["description"]."', no_of_questions=" . count($_POST["questions"]) . " WHERE id=".$_POST["id"];
 $conn->query($command);
 
 

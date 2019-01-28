@@ -20,6 +20,7 @@ $result = $conn->query($command);
                 <th>Name</th>
                 <th>Bank Id</th>
                 <th>Description</th>
+                <th>Number of Questions</th>
                 <th>Created On</th>
                 <th>Created By</th>
                 <th>Delete</th>
@@ -36,7 +37,8 @@ while($row = $result->fetch_assoc()) {
     <td data-label="Name"><a href="/interview/question-bank.php?id=<?php echo $row["id"] ?>"><?php echo $row["name"]; ?></a></td>
     <td data-label="Bank Id"><?php echo $row["id"]; ?></td>
     <td data-label="Description"><?php echo $row["description"]; ?></td>
-    <td data-label="Created On"><?php echo $row["date"]; ?></td>
+    <td data-label="Number of Questions"><?php echo $row["no_of_questions"]; ?></td>
+    <td data-label="Created On"><?php echo $row["created_on"]; ?></td>
     <td data-label="Created By"><?php echo $row["created_by"]; ?></td>
     <td data-label="Delete"><a href="/interview/delete-questionbank.php?id=<?php echo $row["id"]; ?>"><i class="x icon"></i></a></td>
 </tr>
