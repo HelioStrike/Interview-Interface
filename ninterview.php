@@ -49,20 +49,20 @@
             
               <div class="field">
                 <label>Start Time</label>
-                <input type="text" name="startyear" placeholder="Year" style="width:15%;">
-                <input type="text" name="startmonth" placeholder="Month" style="width:15%;">
-                <input type="text" name="startday" placeholder="Day" style="width:15%;">
-                <input type="text" name="starthour" placeholder="Hour" style="width:15%;">
-                <input type="text" name="startminute" placeholder="Minute" style="width:15%;">
+                <input type="text" name="startyear" placeholder="Year" style="width:15%;" value="<?php echo date("Y"); ?>"> 
+                <input type="text" name="startmonth" placeholder="Month" style="width:15%;" value="<?php echo date("m"); ?>"> 
+                <input type="text" name="startday" placeholder="Day" style="width:15%;" value="<?php echo date("d"); ?>">
+                <input type="text" name="starthour" placeholder="Hour" style="width:15%;" value="<?php echo date("H"); ?>">
+                <input type="text" name="startminute" placeholder="Minute" style="width:15%;" value="<?php echo date("i"); ?>">
               </div>
 
               <div class="field">
                 <label>End Time</label>
-                <input type="text" name="endyear" placeholder="Year" style="width:15%;">
-                <input type="text" name="endmonth" placeholder="Month" style="width:15%;">
-                <input type="text" name="endday" placeholder="Day" style="width:15%;">
-                <input type="text" name="endhour" placeholder="Hour" style="width:15%;">
-                <input type="text" name="endminute" placeholder="Minute" style="width:15%;">
+                <input type="text" name="endyear" placeholder="Year" style="width:15%;" value="<?php echo date("Y"); ?>"> 
+                <input type="text" name="endmonth" placeholder="Month" style="width:15%;" value="<?php echo date("m"); ?>"> 
+                <input type="text" name="endday" placeholder="Day" style="width:15%;" value="<?php echo date("d"); ?>">  
+                <input type="text" name="endhour" placeholder="Hour" style="width:15%;" value="<?php echo date("H"); ?>">  
+                <input type="text" name="endminute" placeholder="Minute" style="width:15%;" value="<?php echo date("i"); ?>">  
               </div>
 
               <div class="field">
